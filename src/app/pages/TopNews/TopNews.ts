@@ -3,11 +3,11 @@ import { Article } from '../../interfaces';
 import { NewsService } from '../../services/news.service';
 
 @Component({
-  selector: 'app-tab1',
-  templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  selector: 'app-TopNews',
+  templateUrl: 'TopNews.page.html',
+  styleUrls: ['TopNews.page.scss']
 })
-export class Tab1Page implements OnInit{
+export class TopNewsPage implements OnInit{
 
   public articles: Article[] = [];
 
