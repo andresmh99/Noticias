@@ -8,8 +8,8 @@ import { NewsResponse } from '../interfaces';
 })
 export class NewsService {
 
-  url: string = environment.URL;
-  apikey: string = environment.apiKey;
+  url: string = 'https://newsapi.org/v2/';
+  apikey: string = '89b0df2490a7409c945ad027173f4dae';
 
   constructor(private http: HttpClient) { }
 
