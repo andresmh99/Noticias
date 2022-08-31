@@ -6,6 +6,7 @@ import { TopNewsPage } from './TopNews';
 import { ExploreContainerComponentModule } from '../../explore-container/explore-container.module';
 
 import { TopNewsPageRoutingModule } from './TopNews-routing.module';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { TopNewsPageRoutingModule } from './TopNews-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    TopNewsPageRoutingModule
+    TopNewsPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [TopNewsPage]
 })

@@ -13,30 +13,14 @@
     </ion-toolbar>
   </ion-header>
 
+    <app-articles [articles]="articles"></app-articles>
+    <ion-infinite-scroll threshold="25%" (ionInfinite)="loadData($event)" position="bottom">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Loading more data...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 
-
-  <main>
-    <ion-grid fixed>
-      <ion-row>
-        <ion-col>
-          <ion-card *ngFor="let article of articles, let i = index">
-            <a href="{{article.url}}" target="_blank"><ion-img src="{{article.urlToImage}}"></ion-img></a>
-            <ion-card-header>
-              <ion-card-subtitle class="article-title">{{article.title}}</ion-card-subtitle>
-              <ion-row>
-                <span class="text-primary">{{i+1}}-</span>
-                <span class="article-source-name"> {{article.source.name}}</span>
-              </ion-row>
-            </ion-card-header>
-            <ion-card-content>
-              <p class="ion-text-justify">{{article.description}}</p>
-              <ion-label style="margin-right: 30px;">{{article.publishedAt | date}}</ion-label>
-              <a href="{{article.url}}" target="_blank"><ion-button color="tertiary" fill="outline" slot="end">View</ion-button></a>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-  </main>
 </ion-content>
+
+
